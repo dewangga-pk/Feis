@@ -24,7 +24,7 @@
       <Text layoutX="31.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
       <Text layoutX="31.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
       <PasswordField layoutX="31.0" layoutY="285.0" style="-fx-background-radius: 5;" />
-      <Button layoutX="128.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: #909d45;" text="Login" />
+      <Button layoutX="112.0" layoutY="327.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: #909d45;" text="Login" textFill="WHITE" />
       <Circle fill="#fbef84" layoutX="347.0" layoutY="155.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fill="#909d45" layoutX="347.0" layoutY="228.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fill="#ffab27" layoutX="347.0" layoutY="298.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
@@ -33,22 +33,22 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Text>
-      <Text fx:id="berasText" layoutX="382.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secara keseluruhan,stok beras di Bulog Jember ini setidaknya 30 ribu ton.Jumlah tersebut adalah secara total baik beras medium ataupun preimun.Bahkan,banyaknya stok beras dari Jember tersebut juga menyupladi kebutuhan beras didaerah Madura dan di daerah timur Indonesia." wrappingWidth="243.7366943359375">
+      <Text layoutX="382.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secara keseluruhan,stok beras di Bulog Jember ini setidaknya 30 ribu ton.Jumlah tersebut adalah secara total baik beras medium ataupun preimun.Bahkan,banyaknya stok beras dari Jember tersebut juga menyupladi kebutuhan beras didaerah Madura dan di daerah timur Indonesia." wrappingWidth="243.7366943359375">
          <font>
             <Font size="9.0" />
          </font>
       </Text>
-      <Text fx:id="kedelaiText" layoutX="382.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Benih kedelai berkualtias sulit didapatkan petani Jember karena minimnya pembenih kedelai lokal.Selain itu,juda disebabkan terus merosotnya jumlah produksi kedelai.Jumlah produksi kedelai dari tahun-ketahun di kabupaten Jember Jawa Timur ternyata semakin merosot." wrappingWidth="243.7366943359375">
+      <Text layoutX="382.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Benih kedelai berkualtias sulit didapatkan petani Jember karena minimnya pembenih kedelai lokal.Selain itu,juda disebabkan terus merosotnya jumlah produksi kedelai.Jumlah produksi kedelai dari tahun-ketahun di kabupaten Jember Jawa Timur ternyata semakin merosot." wrappingWidth="243.7366943359375">
          <font>
             <Font size="9.0" />
          </font>
       </Text>
-      <Text fx:id="jagungText" layoutX="382.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi jagung di Kabupaten Jember,Jawa Timur,hingga Oktober,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam jagung Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="243.7366943359375">
+      <Text layoutX="382.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi jagung di Kabupaten Jember,Jawa Timur,hingga Oktober,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam jagung Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="243.7366943359375">
          <font>
             <Font size="9.0" />
          </font>
       </Text>
-      <Text fx:id="gandumText" layoutX="382.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi gandum di Kabupaten Jember,Jawa Timur,hingga Oktober,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam gandum Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="243.7366943359375">
+      <Text layoutX="382.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi gandum di Kabupaten Jember,Jawa Timur,hingga Oktober,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam gandum Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="243.7366943359375">
          <font>
             <Font size="9.0" />
          </font>
@@ -57,5 +57,6 @@
       <Text layoutX="328.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kedelai" />
       <Text layoutX="328.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jagung" />
       <Text layoutX="324.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gandum" />
+      <Button layoutX="32.0" layoutY="327.0" mnemonicParsing="false" onAction="#registerBtn" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: #F8B634;" text="Register" textFill="#fafafa" />
    </children>
 </AnchorPane>

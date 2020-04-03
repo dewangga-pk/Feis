@@ -1,19 +1,29 @@
 package controllers;
 
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.text.Text;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class MainController {
-
+public class MainController  {
     @FXML
-    private Text berasText;
+    void registerBtn(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
 
-    @FXML
-    private Text kedelaiText;
-
-    @FXML
-    private Text jagungText;
-
-    @FXML
-    private Text gandumText;
+        Parent view = null;
+        try {
+            view = FXMLLoader.load(MainController.class.getResource("../views/Register.fxml"));
+            Scene scene = new Scene(view);
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
