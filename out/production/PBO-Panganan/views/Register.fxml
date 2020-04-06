@@ -54,11 +54,11 @@
       <Text layoutX="328.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kedelai" />
       <Text layoutX="328.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jagung" />
       <Text layoutX="324.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gandum" />
-      <TextField layoutX="9.0" layoutY="150.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="noIndukText" layoutX="9.0" layoutY="150.0" style="-fx-background-radius: 5;" />
       <Text layoutX="9.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Induk" />
       <Text layoutX="9.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap" />
       <Button layoutX="205.0" layoutY="439.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #909d45;" text="Register" textFill="#fafafa" />
-      <TextField layoutX="163.0" layoutY="150.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="emailText" layoutX="163.0" layoutY="150.0" style="-fx-background-radius: 5;" />
       <Text layoutX="163.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat Email" />
       <Text layoutX="163.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Telp" />
       <Text layoutX="14.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information">
@@ -71,16 +71,16 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField layoutX="9.0" layoutY="264.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="userNameText" layoutX="9.0" layoutY="264.0" style="-fx-background-radius: 5;" />
       <Text layoutX="9.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
       <Text layoutX="9.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-      <PasswordField layoutX="9.0" layoutY="321.0" style="-fx-background-radius: 5;" />
+      <PasswordField fx:id="passwordText" layoutX="9.0" layoutY="321.0" style="-fx-background-radius: 5;" />
       <Text layoutX="9.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ketik Ulang Password" />
-      <PasswordField layoutX="9.0" layoutY="378.0" style="-fx-background-radius: 5;" />
-      <TextField layoutX="9.0" layoutY="209.0" style="-fx-background-radius: 5;" />
-      <JFXCheckBox layoutX="11.0" layoutY="412.0" text="Saya yakin semua data sudah benar" />
-      <Button layoutX="40.0" layoutY="439.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #F8B634;" text="Reset" textFill="#fafafa" />
+      <PasswordField fx:id="passwordReText" layoutX="9.0" layoutY="378.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="namaLengkapText" layoutX="9.0" layoutY="209.0" style="-fx-background-radius: 5;" />
+      <JFXCheckBox fx:id="checkListRegister" layoutX="11.0" layoutY="412.0" text="Saya yakin semua data sudah benar" />
+      <Button layoutX="40.0" layoutY="439.0" mnemonicParsing="false" onAction="#resetBtn" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #F8B634;" text="Reset" textFill="#fafafa" />
       <Button layoutX="521.0" layoutY="439.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0066F5;" text="Login" textFill="#fafafa" />
-      <TextField layoutX="163.0" layoutY="209.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="noTelpText" layoutX="163.0" layoutY="209.0" style="-fx-background-radius: 5;" />
    </children>
 </AnchorPane>
