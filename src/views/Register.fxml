@@ -10,77 +10,115 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #e6f5a4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #e6f5a4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
    <children>
-      <Pane layoutY="-1.0" prefHeight="71.0" prefWidth="640.0" style="-fx-background-color: #909d45;">
+      <TextField fx:id="noIndukText" layoutX="15.0" layoutY="235.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 5;" />
+      <Text layoutX="15.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Induk">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font></Text>
+      <Text layoutX="15.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font></Text>
+      <Button layoutX="15.0" layoutY="649.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #909d45;" text="Register" textFill="#fafafa" />
+      <TextField fx:id="emailText" layoutX="280.0" layoutY="235.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 5;" />
+      <Text layoutX="280.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat Email">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font></Text>
+      <Text layoutX="280.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Telp">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font></Text>
+      <Text layoutX="15.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="266.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="userNameText" layoutX="15.0" layoutY="395.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 5;" />
+      <Text layoutX="15.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font></Text>
+      <Text layoutX="15.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font></Text>
+      <PasswordField fx:id="passwordText" layoutX="15.0" layoutY="465.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 5;" />
+      <Text layoutX="15.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ketik Ulang Password">
+         <font>
+            <Font name="Georgia" size="15.0" />
+         </font></Text>
+      <PasswordField fx:id="passwordReText" layoutX="15.0" layoutY="545.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="namaLengkapText" layoutX="15.0" layoutY="315.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 5;" />
+      <JFXCheckBox fx:id="checkListRegister" layoutX="15.0" layoutY="607.0" text="Saya yakin semua data sudah benar">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font></JFXCheckBox>
+      <TextField fx:id="noTelpText" layoutX="280.0" layoutY="315.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 5;" />
+      <Pane layoutX="10.0" layoutY="9.0" prefHeight="70.0" prefWidth="1024.0" style="-fx-background-color: #909d45;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text fill="WHITE" layoutX="21.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Equalization Information System for Suistanable Development Goals" wrappingWidth="597.475341796875">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Equalization Information System for Suistanable Development Goals" wrappingWidth="823.6086883544922" x="110.0" y="40.0">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Segoe UI" size="25.0" />
                </font>
             </Text>
          </children>
       </Pane>
-      <Circle fill="#fbef84" layoutX="347.0" layoutY="155.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fill="#909d45" layoutX="347.0" layoutY="228.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fill="#ffab27" layoutX="347.0" layoutY="298.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fill="#f9be65" layoutX="347.0" layoutY="367.0" radius="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text layoutX="336.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regional Information">
+      <Circle fill="#fbef84" layoutX="583.0" layoutY="278.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#909d45" layoutX="583.0" layoutY="384.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#ffab27" layoutX="583.0" layoutY="474.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#f9be65" layoutX="583.0" layoutY="564.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text layoutX="556.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regional Information">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="Segoe UI Bold" size="20.0" />
          </font>
       </Text>
-      <Text layoutX="382.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secara keseluruhan,stok beras di Bulog Jember ini setidaknya 30 ribu ton.Jumlah tersebut adalah secara total baik beras medium ataupun preimun.Bahkan,banyaknya stok beras dari Jember tersebut juga menyupladi kebutuhan beras didaerah Madura dan di daerah timur Indonesia." wrappingWidth="243.7366943359375">
+      <Text layoutX="633.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secara keseluruhan,stok beras di Bulog Jember ini setidaknya 30 ribu ton.Jumlah tersebut adalah secara total baik beras medium ataupun preimun.Bahkan,banyaknya stok beras dari Jember tersebut juga menyupladi kebutuhan beras didaerah Madura dan di daerah timur Indonesia." wrappingWidth="377.0699462890625">
          <font>
-            <Font size="9.0" />
+            <Font name="Segoe UI" size="13.0" />
          </font>
       </Text>
-      <Text layoutX="382.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Benih kedelai berkualtias sulit didapatkan petani Jember karena minimnya pembenih kedelai lokal.Selain itu,juda disebabkan terus merosotnya jumlah produksi kedelai.Jumlah produksi kedelai dari tahun-ketahun di kabupaten Jember Jawa Timur ternyata semakin merosot." wrappingWidth="243.7366943359375">
+      <Text layoutX="634.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Benih kedelai berkualtias sulit didapatkan petani Jember karena minimnya pembenih kedelai lokal.Selain itu,juda disebabkan terus merosotnya jumlah produksi kedelai.Jumlah produksi kedelai dari tahun-ketahun di kabupaten Jember Jawa Timur ternyata semakin merosot." wrappingWidth="374.93658447265625">
          <font>
-            <Font size="9.0" />
+            <Font name="Segoe UI" size="13.0" />
          </font>
       </Text>
-      <Text layoutX="382.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi jagung di Kabupaten Jember,Jawa Timur,hingga Oktober,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam jagung Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="243.7366943359375">
+      <Text layoutX="631.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi jagung di Kabupaten Jember,Jawa Timur,hingga Oktober ,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam jagung Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="383.4700927734375">
          <font>
-            <Font size="9.0" />
+            <Font name="Segoe UI" size="13.0" />
          </font>
       </Text>
-      <Text layoutX="382.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi gandum di Kabupaten Jember,Jawa Timur,hingga Oktober,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam gandum Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="243.7366943359375">
+      <Text layoutX="631.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi gandum di Kabupaten Jember,Jawa Timur,hingga Oktober ,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam gandum Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="376.1357727050781">
          <font>
-            <Font size="9.0" />
+            <Font name="Segoe UI" size="13.0" />
          </font>
       </Text>
-      <Text layoutX="333.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Beras" />
-      <Text layoutX="328.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kedelai" />
-      <Text layoutX="328.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jagung" />
-      <Text layoutX="324.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gandum" />
-      <TextField fx:id="noIndukText" layoutX="9.0" layoutY="150.0" style="-fx-background-radius: 5;" />
-      <Text layoutX="9.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Induk" />
-      <Text layoutX="9.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap" />
-      <Button layoutX="205.0" layoutY="439.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #909d45;" text="Register" textFill="#fafafa" />
-      <TextField fx:id="emailText" layoutX="163.0" layoutY="150.0" style="-fx-background-radius: 5;" />
-      <Text layoutX="163.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat Email" />
-      <Text layoutX="163.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Telp" />
-      <Text layoutX="14.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information">
+      <Text layoutX="563.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Beras">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="Segoe UI" size="17.0" />
          </font>
       </Text>
-      <Text layoutX="165.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information">
+      <Text layoutX="556.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kedelai">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="Segoe UI" size="17.0" />
          </font>
       </Text>
-      <TextField fx:id="userNameText" layoutX="9.0" layoutY="264.0" style="-fx-background-radius: 5;" />
-      <Text layoutX="9.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
-      <Text layoutX="9.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-      <PasswordField fx:id="passwordText" layoutX="9.0" layoutY="321.0" style="-fx-background-radius: 5;" />
-      <Text layoutX="9.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ketik Ulang Password" />
-      <PasswordField fx:id="passwordReText" layoutX="9.0" layoutY="378.0" style="-fx-background-radius: 5;" />
-      <TextField fx:id="namaLengkapText" layoutX="9.0" layoutY="209.0" style="-fx-background-radius: 5;" />
-      <JFXCheckBox fx:id="checkListRegister" layoutX="11.0" layoutY="412.0" text="Saya yakin semua data sudah benar" />
-      <Button layoutX="40.0" layoutY="439.0" mnemonicParsing="false" onAction="#resetBtn" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #F8B634;" text="Reset" textFill="#fafafa" />
-      <Button layoutX="521.0" layoutY="439.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #0066F5;" text="Login" textFill="#fafafa" />
-      <TextField fx:id="noTelpText" layoutX="163.0" layoutY="209.0" style="-fx-background-radius: 5;" />
+      <Text layoutX="556.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jagung">
+         <font>
+            <Font name="Segoe UI" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="552.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gandum">
+         <font>
+            <Font name="Segoe UI" size="17.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
