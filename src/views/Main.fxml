@@ -78,5 +78,6 @@
          <font>
             <Font name="Segoe UI" size="17.0" />
          </font></Text>
+      <Text fx:id="wrongPassword" fill="#fa0000" layoutX="84.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>
