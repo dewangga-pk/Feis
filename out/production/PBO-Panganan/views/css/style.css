@@ -1,0 +1,105 @@
+.backgroundApp{
+    -fx-pref-height: 768;
+    -fx-pref-width: 1024;
+    -fx-background-image: url('Asset/Jatim.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 1024 568;
+    -fx-background-position: bottom;
+}
+.paneDashboardBlP{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 150%,#60FF00,#2F451E);
+}
+.paneDashboardBPS{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 90%,#0076C5,#00518A);
+}
+.subTitleBarBLP{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#2F451E,#69CD1C);
+}
+.subTitleBarBPS{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#004B65,#0095C9);
+}
+.subPageBarTitlePenduduk{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#004B65,#2196F3);
+}
+.subPageBarTitleKonsumsi{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#004B65,#4CAF50);
+}
+.subPageBarTitlePertanian{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#806104,#FFC107);
+}
+.subPageBarEdit{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#806104,#FFC107);
+}
+.menuDashboard{
+    -fx-pref-width: 150px;
+    -fx-pref-height: 150px;
+    -fx-background-radius: 20px;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+.menuPertanianBPS{
+    -fx-pref-width: 500px;
+    -fx-pref-height: 118px;
+    -fx-background-radius: 15px;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+.btnAdd{
+    -fx-background-image: url('Asset/New.png');
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+}
+.paneUpdate{
+    -fx-font-family: "Segoe UI";
+    -fx-pref-width: 930;
+    -fx-pref-height: 470;
+    -fx-background-color: rgba(2,2,2,0.70);
+    -fx-background-radius: 15;
+}
+.paneWarning{
+    -fx-pref-width: 301;
+    -fx-pref-height: 360;
+}
+.textFieldform{
+    -fx-pref-width: 290;
+    -fx-pref-height: 50;
+    -fx-border-radius: 5;
+}
+.btnSubmit{
+    -fx-pref-width: 140;
+    -fx-pref-height: 32;
+    -fx-background-color: #0CEB38;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+.btnCancel{
+    -fx-pref-width: 140;
+    -fx-pref-height: 32;
+    -fx-background-color: #F25455;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.buttonTitleBar {
+    /*-custom-solid-button-color: lightgreen;*/
+    -custom-translucent-button-color: rgba(00, 00, 00, 1.00);
+    -fx-background-color: none;
+    -fx-text-fill: whitesmoke;
+    -fx-pref-width: 180;
+    -fx-pref-height: 35;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 25;
+}
+.buttonTitleBar:hover,.btnAdd:hover,.btnCancel:hover,.btnSubmit:hover {
+    -custom-solid-button-color: derive(lightgreen, 20%);
+    -fx-effect: dropshadow(gaussian, goldenrod, 10, 0, 3, 3);
+    -fx-cursor: hand;
+}

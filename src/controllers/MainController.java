@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 public class MainController {
+
     @FXML
     private TextField usernameField;
 
@@ -20,13 +21,13 @@ public class MainController {
 
     @FXML
     void loginBtn(ActionEvent event) {
-//        System.out.println("TES LOGIN BUTTON");
-//        System.out.println("Pass : " + passwordField.getText());
-//        System.out.println("Username : " + usernameField.getText());
             try {
                 if (usernameField.getText().equals("litbang")&&passwordField.getText().equals("litbang")){
-                    Helper.changePage(event,"BLPdashboard");
-                }else{
+                    Helper.changePage(event,"/litbang/Dashboard");
+                }else if(usernameField.getText().equals("bps")&&passwordField.getText().equals("bps")){
+                    Helper.changePage(event,"/bps/Dashboard");
+                }
+                else{
                     wrongPassword.setText("*Username atau Password anda salah");
                 }
             }catch (Exception e){

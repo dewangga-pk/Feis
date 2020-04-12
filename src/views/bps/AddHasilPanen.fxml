@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="backgroundApp" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddController">
+   <children>
+      <Pane layoutX="20.0" layoutY="19.0" prefHeight="70.0" prefWidth="1024.0" styleClass="paneDashboardBPS" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Equalization Information System for Suistanable Development Goals" wrappingWidth="823.6086883544922" x="110.0" y="40.0">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="75.0" layoutY="126.0" prefHeight="45.0" prefWidth="408.0" styleClass="subTitleBarBPS" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/Asset/BPS.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="userTitle" fill="WHITE" layoutX="76.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Badan Pusat Statistik">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </Pane>
+      <ToolBar layoutX="208.0" layoutY="93.0" prefHeight="46.0" prefWidth="609.0" styleClass="subTitleBarBPS" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="70.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#dashboardBtn" styleClass="buttonTitleBar" text="Beranda" />
+            <Button mnemonicParsing="false" styleClass="buttonTitleBar" text="Profile">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/Profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logOutbtn" styleClass="buttonTitleBar" text="Keluar">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </items>
+      </ToolBar>
+      <Pane layoutX="85.0" layoutY="136.0" prefHeight="45.0" prefWidth="186.0" styleClass="subPageBarEdit" stylesheets="@../css/style.css" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="118.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="38.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/Asset/edit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/Asset/New.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="76.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </Pane>
+      <Pane layoutX="37.0" layoutY="241.0" prefHeight="200.0" prefWidth="200.0" styleClass="paneUpdate" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="241.0">
+         <children>
+            <TextField layoutX="220.0" layoutY="20.0" styleClass="textFieldform" />
+            <TextField layoutX="220.0" layoutY="172.0" styleClass="textFieldform" />
+            <Text fill="WHITE" layoutX="46.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tahun">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="46.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kota/Kabupaten">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Text>
+            <ScrollPane layoutX="591.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" styleClass="paneWarning">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" styleClass="paneWarning">
+                     <children>
+                        <Text layoutX="10.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pastikan kembali data yang telah diinputkan dengan benar dan sesuai.Segala kesalahan yang bentuk jenis data merupakan tanggung jawab penginput data.Kami tidak bertanggung jawab jika terdapat kesalahan input." wrappingWidth="256.8033447265625">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ed0000" layoutX="11.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peringatan">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <CheckBox layoutX="603.0" layoutY="400.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="285.0" text="Saya telah membaca peringatan dan setuju" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="13.0" />
+               </font>
+            </CheckBox>
+            <JFXButton layoutX="750.0" layoutY="428.0" styleClass="btnSubmit" text="SUBMIT" />
+            <JFXButton layoutX="40.0" layoutY="424.0" onAction="#cancelBtnPertanian1" styleClass="btnCancel" text="Batal" />
+            <TextField layoutX="220.0" layoutY="256.0" styleClass="textFieldform" />
+            <Text fill="WHITE" layoutX="46.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jumlah Panen">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="46.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Tanaman">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Text>
+            <MenuButton layoutX="220.0" layoutY="98.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Jenis">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Padi/Beras" />
+                  <MenuItem mnemonicParsing="false" text="Jagung" />
+                  <MenuItem mnemonicParsing="false" text="Kedelai" />
+               </items>
+            </MenuButton>
+         </children>
+      </Pane>
+      <Pane layoutX="105.0" layoutY="156.0" prefHeight="45.0" prefWidth="186.0" styleClass="subPageBarEdit" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="118.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/Asset/fields.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="menuID" fill="WHITE" layoutX="44.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pertanian">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </Pane>
+   </children>
+</AnchorPane>
