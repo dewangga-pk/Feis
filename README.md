@@ -27,7 +27,7 @@
   	* Open Intellij->Klik Run->Edit Configurations->Application->Main
 	* Pada VM Options :
 	copy paste tulisan ini 
-	> --module-path ${PATH_TO_FX} --add-modules=javafx.controls,javafx.fxml
+	> --module-path ${PATH_TO_FX} --add-modules=javafx.controls,javafx.fxml,javafx.base
 	* Klik Ok
 	* Jika *error* bisa gunakan setting dibawah ini
 	* Ubah **${PATH_TO_FX}** menuju ke lib javaFx,contoh
