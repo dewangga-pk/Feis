@@ -12,7 +12,7 @@
 ### Cara setting javaFx pada Intellij  di Windows
 
  *  #### Setting Library JavaFx
-	* Open Intellij->klik File->Klik Project Structure->Global Libraries->Klik +- >Java
+	* Open Intellij->klik File->Klik Project Structure->Global Libraries->Klik + >Java
 	* >Arahkan pada folder lib javafx sdk contoh :
 	* >>C:\Downloads\javafx-sdk-11.0.2\lib
 	* Klik Ok,jika ada notifikasi ".... module...." pilih ok/yes.
