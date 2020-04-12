@@ -12,11 +12,17 @@
 .paneDashboardBPS{
     -fx-background-color: linear-gradient(from 0% 0% to 0% 90%,#0076C5,#00518A);
 }
+.paneDashboardBappeda{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 90%,#2D2D2D,#727272);
+}
 .subTitleBarBLP{
     -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#2F451E,#69CD1C);
 }
 .subTitleBarBPS{
     -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#004B65,#0095C9);
+}
+.subTitleBarBappeda{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 90%,#727272,#2D2D2D);
 }
 .subPageBarTitlePenduduk{
     -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#004B65,#2196F3);
@@ -26,6 +32,18 @@
 }
 .subPageBarTitlePertanian{
     -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#806104,#FFC107);
+}
+.subPageBarDataPenduduk{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#0B2D48,#155A90);
+}
+.subPageBarDataTanaman{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#3E5107,#7CA20E);
+}
+.subPageBarDataPemerataan{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#101335,#1F266A);
+}
+.subPageBarCalculator{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#321F23,#643D46);
 }
 .subPageBarEdit{
     -fx-background-color: linear-gradient(from 0% 0% to 0% 45%,#806104,#FFC107);
@@ -53,6 +71,13 @@
     -fx-pref-width: 40;
     -fx-pref-height: 40;
 }
+.paneCalculator{
+    -fx-font-family: "Segoe UI";
+    -fx-pref-width: 570;
+    -fx-pref-height: 470;
+    -fx-background-color: rgba(2,2,2,0.70);
+    -fx-background-radius: 15;
+}
 .paneUpdate{
     -fx-font-family: "Segoe UI";
     -fx-pref-width: 930;
@@ -68,6 +93,15 @@
     -fx-pref-width: 290;
     -fx-pref-height: 50;
     -fx-border-radius: 5;
+}
+.btnHitung{
+    -fx-pref-width: 140;
+    -fx-pref-height: 32;
+    -fx-background-color: #6DD2F5;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
 }
 .btnSubmit{
     -fx-pref-width: 140;

@@ -23,12 +23,15 @@ public class MainController {
     void loginBtn(ActionEvent event) {
             try {
                 if (usernameField.getText().equals("litbang")&&passwordField.getText().equals("litbang")){
-                    Helper.changePage(event,"/litbang/Dashboard");
+                    Helper.changePage(event,"litbang/Dashboard");
                 }else if(usernameField.getText().equals("bps")&&passwordField.getText().equals("bps")){
-                    Helper.changePage(event,"/bps/Dashboard");
+                    Helper.changePage(event,"bps/Dashboard");
+                }else if(usernameField.getText().equals("bappeda")&&passwordField.getText().equals("bappeda")){
+                    Helper.changePage(event,"bappeda/Dashboard");
                 }
                 else{
-                    wrongPassword.setText("*Username atau Password anda salah");
+                    if(usernameField.getText().equals("admin"))wrongPassword.setText("Ga ada user admin gan,belom buat");
+                    else wrongPassword.setText("*Username atau Password anda salah");
                 }
             }catch (Exception e){
                 System.out.println("Error gan");

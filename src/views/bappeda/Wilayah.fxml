@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="backgroundApp" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.bappeda.WilayahController">
+   <children>
+      <Pane layoutX="10.0" layoutY="9.0" prefHeight="70.0" prefWidth="1024.0" styleClass="paneDashboardBappeda" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Equalization Information System for Suistanable Development Goals" wrappingWidth="823.6086883544922" x="110.0" y="40.0">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <JFXTreeTableView layoutX="159.0" layoutY="170.0" prefHeight="470.0" prefWidth="930.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="230.0">
+         <columns>
+            <TreeTableColumn prefWidth="50.0" text="No" />
+            <TreeTableColumn prefWidth="180.0" text="Kota / Kabupaten" />
+            <TreeTableColumn minWidth="100.0" prefWidth="130.0" text="Jumlah Penduduk" />
+            <TreeTableColumn prefWidth="224.0" text="Tingkat Konsumsi(kg per kapita) " />
+            <TreeTableColumn prefWidth="187.0" text="Luas Lahan Pertanian" />
+            <TreeTableColumn prefWidth="158.0" text="Update Terakhir" />
+         </columns>
+      </JFXTreeTableView>
+      <ToolBar layoutX="198.0" layoutY="83.0" prefHeight="46.0" prefWidth="609.0" styleClass="subTitleBarBappeda" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="70.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#dashboardBtn" styleClass="buttonTitleBar" text="Beranda" />
+            <Button mnemonicParsing="false" styleClass="buttonTitleBar" text="Profile">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/Profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logOutbtn" styleClass="buttonTitleBar" text="Keluar">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+        </items>
+      </ToolBar>
+      <Pane layoutX="65.0" layoutY="116.0" prefHeight="45.0" prefWidth="408.0" styleClass="subTitleBarBappeda" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/Asset/logojatim.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="152.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BAPPEDA">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </Pane>
+      <Pane layoutX="95.0" layoutY="146.0" prefHeight="46.0" prefWidth="263.0" styleClass="subPageBarDataPenduduk" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="115.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/Asset/penduduk.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="109.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Wilayah">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/Asset/Food.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="70.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/Asset/fields.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </Pane>
+   </children>
+</AnchorPane>
