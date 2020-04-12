@@ -3,7 +3,8 @@
 
 
 - [x] Support Java JDK 11-13 [Download](https://www.oracle.com/java/technologies/javase-downloads.html)
-
+- [x] Intellij 2019.3.4 [Download](https://www.jetbrains.com/idea/)
+- [x] Scene Builder [Download](https://gluonhq.com/products/scene-builder/)
 - [x] JavaFx SDK 11.0.2 [Download](https://gluonhq.com/products/javafx/)
 - [x] Jfoenix 9.08 [Download](https://github.com/jfoenixadmin/JFoenix)
 
@@ -34,3 +35,4 @@
 	* Klik Ok
 
 ### Done silahkan di run
+[Referensi Setting](https://taylorial.com/cs1021/Install.htm#installingjava11openjdkandjavafx)
