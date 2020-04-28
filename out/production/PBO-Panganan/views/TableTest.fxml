@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="786.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TableTestController">
+   <children>
+      <AnchorPane fx:id="updatePane" layoutX="755.0" layoutY="190.0" prefHeight="266.0" prefWidth="255.0" style="-fx-border-color: black;">
+         <children>
+            <JFXComboBox fx:id="combo_city" layoutX="14.0" layoutY="138.0" prefHeight="25.0" prefWidth="149.0" promptText="Kota" />
+            <JFXButton fx:id="btn_submit" layoutX="14.0" layoutY="207.0" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: green;" text="NewData" textFill="WHITE" />
+            <TextField fx:id="name_field" layoutX="14.0" layoutY="31.0" promptText="Nama" />
+            <TextField fx:id="email_field" layoutX="14.0" layoutY="75.0" promptText="Email" />
+            <JFXComboBox fx:id="combo_gender" layoutX="14.0" layoutY="108.0" prefHeight="25.0" prefWidth="149.0" promptText="Jenis Kelamin" />
+            <JFXButton fx:id="btn_listCity" layoutX="171.0" layoutY="138.0" style="-fx-background-color: blue;" text="Lihat Kota" textFill="WHITE" />
+            <JFXButton fx:id="btn_update" layoutX="128.0" layoutY="207.0" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: grey;" text="Update" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="50.0" layoutY="150.0" prefHeight="306.0" prefWidth="685.0">
+         <children>
+            <TableView fx:id="dataTable" layoutX="7.0" layoutY="45.0" prefHeight="247.0" prefWidth="671.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="45.0">
+              <columns>
+                <TableColumn fx:id="column_nama" prefWidth="177.0" text="Nama" />
+                  <TableColumn fx:id="column_email" prefWidth="97.0" text="Alamat Email" />
+                  <TableColumn fx:id="column_jenisKelamin" prefWidth="99.0" text="Jenis Kelamin" />
+                  <TableColumn fx:id="column_kota" prefWidth="94.0" text="Kota" />
+                  <TableColumn fx:id="column_id" prefWidth="77.0" text="ID" />
+                  <TableColumn fx:id="col_date" prefWidth="126.0" text="Last Update" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btn_edit" layoutX="562.0" layoutY="14.0" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: orange;" text="Edit" textFill="WHITE" />
+            <JFXButton fx:id="btn_delete" layoutX="627.0" layoutY="14.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

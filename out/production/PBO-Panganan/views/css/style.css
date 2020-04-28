@@ -66,11 +66,6 @@
     -fx-text-fill: white;
     -fx-cursor: hand;
 }
-.btnAdd{
-    -fx-background-image: url('Asset/New.png');
-    -fx-pref-width: 40;
-    -fx-pref-height: 40;
-}
 .paneCalculator{
     -fx-font-family: "Segoe UI";
     -fx-pref-width: 570;
@@ -104,21 +99,21 @@
     -fx-font-weight: bold;
 }
 .btnSubmit{
-    -fx-pref-width: 140;
-    -fx-pref-height: 32;
+    -fx-pref-width: 80;
+    -fx-pref-height: 30;
     -fx-background-color: #0CEB38;
     -fx-text-fill: #FFFFFF;
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 18;
+    -fx-font-size: 13;
     -fx-font-weight: bold;
 }
 .btnCancel{
-    -fx-pref-width: 140;
-    -fx-pref-height: 32;
+    -fx-pref-width: 50;
+    -fx-pref-height: 30;
     -fx-background-color: #F25455;
     -fx-text-fill: #FFFFFF;
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 18;
+    -fx-font-size: 13;
     -fx-font-weight: bold;
 }
 
@@ -128,12 +123,34 @@
     -fx-background-color: none;
     -fx-text-fill: whitesmoke;
     -fx-pref-width: 180;
-    -fx-pref-height: 35;
+    -fx-pref-height: 34;
     -fx-font-family: "Segoe UI";
     -fx-font-size: 25;
 }
-.buttonTitleBar:hover,.btnAdd:hover,.btnCancel:hover,.btnSubmit:hover {
+.buttonTitleBar:hover,.btnCancel:hover,.btnSubmit:hover {
     -custom-solid-button-color: derive(lightgreen, 20%);
     -fx-effect: dropshadow(gaussian, goldenrod, 10, 0, 3, 3);
     -fx-cursor: hand;
+}
+.paneManagement{
+    -fx-border-color: grey;
+    -fx-background-color: rgba(198,204,224,0.70);
+}
+.btnAdd{
+    -fx-background-color: limegreen;
+    -fx-cursor: hand;
+}
+.btnEdit{
+    -fx-background-color: orange;
+    -fx-cursor: hand;
+}
+.btnDelete{
+    -fx-background-color: #F25455;
+    -fx-cursor: hand;
+}
+.tableLabel{
+    -fx-font-family: "Berlin Sans FB";
+    -fx-background-color: white;
+    -fx-border-color: grey;
+    -fx-font-size: 29;
 }

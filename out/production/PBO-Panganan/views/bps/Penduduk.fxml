@@ -24,7 +24,7 @@
             </Text>
          </children>
       </Pane>
-      <JFXTreeTableView layoutX="159.0" layoutY="170.0" prefHeight="470.0" prefWidth="930.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="230.0">
+      <JFXTreeTableView fx:id="pendudukTable" layoutX="159.0" layoutY="170.0" prefHeight="470.0" prefWidth="930.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="230.0">
          <columns>
             <TreeTableColumn prefWidth="90.0" text="No" />
             <TreeTableColumn prefWidth="303.0" text="Kota / Kabupaten" />
