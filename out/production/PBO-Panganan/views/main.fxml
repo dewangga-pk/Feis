@@ -41,7 +41,6 @@
       <Circle fill="#fbef84" layoutX="573.0" layoutY="268.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fill="#909d45" layoutX="573.0" layoutY="374.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fill="#ffab27" layoutX="573.0" layoutY="464.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fill="#f9be65" layoutX="573.0" layoutY="554.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Text layoutX="546.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regional Information">
          <font>
             <Font name="System Bold" size="20.0" />
@@ -61,11 +60,6 @@
             <Font name="Segoe UI" size="13.0" />
          </font>
       </Text>
-      <Text layoutX="621.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produksi gandum di Kabupaten Jember,Jawa Timur,hingga Oktober ,mencapai 273.903 ton dengan luasan panen 39.129 hektar.Sementara luasan tanam gandum Jember per Oktober sudah mencapai 55.016 hektar dari 31 kecamatan." wrappingWidth="376.1357727050781">
-         <font>
-            <Font name="Segoe UI" size="13.0" />
-         </font>
-      </Text>
       <Text layoutX="553.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Beras">
          <font>
             <Font name="Segoe UI" size="17.0" />
@@ -75,10 +69,6 @@
             <Font name="Segoe UI" size="17.0" />
          </font></Text>
       <Text layoutX="546.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jagung">
-         <font>
-            <Font name="Segoe UI" size="17.0" />
-         </font></Text>
-      <Text layoutX="542.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gandum">
          <font>
             <Font name="Segoe UI" size="17.0" />
          </font></Text>

@@ -16,6 +16,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -76,7 +77,7 @@
       </AnchorPane>
       <AnchorPane fx:id="DashboardView" layoutY="170.0" prefHeight="550.0" prefWidth="1024.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
          <children>
-            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="171.0" layoutY="200.0" onAction="#btn_penduduk" style="-fx-background-color: #2196F3;" styleClass="menuDashboard" text="Penduduk" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="171.0" AnchorPane.rightAnchor="703.0" AnchorPane.topAnchor="200.0">
+            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="149.0" layoutY="155.0" onAction="#btn_penduduk" style="-fx-background-color: #2196F3;" styleClass="menuDashboard" text="Penduduk" AnchorPane.bottomAnchor="245.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="725.0" AnchorPane.topAnchor="155.0">
                <padding>
                   <Insets bottom="10.0" top="5.0" />
                </padding>
@@ -91,7 +92,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="447.0" layoutY="200.0" onAction="#btn_konsumsi" style="-fx-background-color: #4CAF50;" styleClass="menuDashboard" text="Konsumsi" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="447.0" AnchorPane.rightAnchor="427.0" AnchorPane.topAnchor="200.0">
+            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="425.0" layoutY="155.0" onAction="#btn_konsumsi" style="-fx-background-color: #4CAF50;" styleClass="menuDashboard" text="Konsumsi" AnchorPane.bottomAnchor="245.0" AnchorPane.leftAnchor="425.0" AnchorPane.rightAnchor="449.0" AnchorPane.topAnchor="155.0">
                <padding>
                   <Insets bottom="10.0" top="5.0" />
                </padding>
@@ -103,7 +104,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="733.0" layoutY="200.0" onAction="#btn_pertanian" prefWidth="176.0" style="-fx-background-color: #FFC107;" styleClass="menuDashboard" text="Pertanian" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="733.0" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="200.0">
+            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="711.0" layoutY="155.0" onAction="#btn_pertanian" prefWidth="176.0" style="-fx-background-color: #FFC107;" styleClass="menuDashboard" text="Pertanian" AnchorPane.bottomAnchor="245.0" AnchorPane.leftAnchor="711.0" AnchorPane.rightAnchor="163.0" AnchorPane.topAnchor="155.0">
                <padding>
                   <Insets bottom="10.0" top="5.0" />
                </padding>
@@ -123,15 +124,16 @@
                <children>
                   <TableView fx:id="tabel_penduduk" layoutX="23.0" layoutY="62.0" prefHeight="394.0" prefWidth="626.0">
                     <columns>
-                      <TableColumn fx:id="col_pend_No" prefWidth="75.0" text="No" />
-                      <TableColumn fx:id="col_pend_Kota" prefWidth="196.0" text="Kota / Kabupaten" />
-                        <TableColumn fx:id="col_pend_Jumlah" prefWidth="156.0" text="Jumlah" />
-                        <TableColumn fx:id="col_penduduk_LastUpdate" prefWidth="198.0" text="Update Terakhir" />
+                      <TableColumn fx:id="col_pend_No" minWidth="0.0" prefWidth="43.0" resizable="false" text="No" visible="false" />
+                      <TableColumn fx:id="col_pend_Kota" prefWidth="187.0" text="Kota / Kabupaten" />
+                        <TableColumn fx:id="col_pend_Jumlah" prefWidth="152.0" text="Jumlah" />
+                        <TableColumn fx:id="col_pend_Tahun" prefWidth="144.0" text="Tahun" />
+                        <TableColumn fx:id="col_penduduk_LastUpdate" prefWidth="142.0" text="Update Terakhir" />
                     </columns>
                   </TableView>
                   <Pane fx:id="paneAddUpdatePenduduk" layoutX="658.0" layoutY="62.0" prefHeight="394.0" prefWidth="239.0" styleClass="paneManagement" visible="false">
                      <children>
-                        <Label fx:id="label_MenuManagement" layoutX="14.0" layoutY="11.0" text="Tambahkan Data" textFill="WHITE">
+                        <Label fx:id="label_MenuManagementPend" layoutX="14.0" layoutY="11.0" textFill="WHITE">
                            <font>
                               <Font name="Century Gothic Bold Italic" size="23.0" />
                            </font>
@@ -140,7 +142,7 @@
                         <TextField fx:id="field_jumlahPenduduk" layoutX="11.0" layoutY="165.0" prefHeight="40.0" prefWidth="200.0" promptText="Jumlah" />
                         <JFXCheckBox fx:id="check_policy_Penduduk" layoutX="14.0" layoutY="322.0" text="Saya menyetujui peringatan diatas" />
                         <JFXButton layoutX="14.0" layoutY="352.0" onAction="#btn_cancel_penduduk" styleClass="btnCancel" text="Batal" />
-                        <JFXButton layoutX="145.0" layoutY="352.0" onAction="#btn_submit_penduudk" styleClass="btnSubmit" text="Tambah" />
+                        <JFXButton layoutX="145.0" layoutY="352.0" onAction="#btn_submit_penduudk" styleClass="btnSubmit" text="Submit" />
                         <AnchorPane layoutX="12.0" layoutY="217.0" prefHeight="86.0" prefWidth="197.0">
                            <children>
                               <ScrollPane layoutX="-3.0" layoutY="47.0" prefHeight="102.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -160,13 +162,13 @@
                            </children>
                         </AnchorPane>
                         <TextField fx:id="field_tahun_JumlahPenduduk" layoutX="9.0" layoutY="113.0" prefHeight="40.0" prefWidth="200.0" promptText="Tahun" />
+                        <Text fx:id="text_infoFormPenduduk" fill="RED" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                      </children>
                   </Pane>
                   <ToolBar layoutX="23.0" layoutY="14.0" prefHeight="40.0" prefWidth="291.0">
                     <items>
                       <Button mnemonicParsing="false" onAction="#btn_pend_tambahData" styleClass="btnAdd" text="Tambah Data Baru" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#btn_pend_editData" styleClass="btnEdit" text="Edit Data" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#btn_pend_deleteData" styleClass="btnDelete" text="Delete Data" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#btn_pend_editData" styleClass="btnEdit" text="Edit Data/Update" textFill="WHITE" />
                     </items>
                   </ToolBar>
                </children>
@@ -218,27 +220,31 @@
                <children>
                   <TableView fx:id="tabel_konsumsi" layoutX="23.0" layoutY="62.0" prefHeight="394.0" prefWidth="626.0">
                      <columns>
-                        <TableColumn fx:id="col_kons_No" prefWidth="75.0" text="No" />
-                        <TableColumn fx:id="col_kons_Kota" prefWidth="196.0" text="Kota / Kabupaten" />
-                        <TableColumn fx:id="col_kons_Jumlah" prefWidth="156.0" text="Jumlah (Kg Perkapita)" />
-                        <TableColumn fx:id="col_kons_LastUpdate" prefWidth="198.0" text="Update Terakhir" />
+                        <TableColumn fx:id="col_kons_No" minWidth="0.0" prefWidth="0.0" resizable="false" text="No" visible="false" />
+                        <TableColumn fx:id="col_kons_JenisPangan" prefWidth="229.0" text="Jenis Pangan" />
+                        <TableColumn fx:id="col_kons_Jumlah" prefWidth="156.0" text="Jumlah (Kg) per kapita" />
+                        <TableColumn fx:id="col_kons_Tahun" prefWidth="101.0" text="Tahun" />
+                        <TableColumn fx:id="col_kons_LastUpdate" prefWidth="139.0" text="Terakhir Update" />
                      </columns>
                   </TableView>
                   <Pane fx:id="paneAddUpdateKonsumsi" layoutX="658.0" layoutY="62.0" prefHeight="394.0" prefWidth="239.0" styleClass="paneManagement" visible="false">
                      <children>
-                        <Label fx:id="label_MenuManagement" layoutX="14.0" layoutY="11.0" text="Tambahkan Data" textFill="WHITE">
+                        <Label fx:id="label_MenuManagementKonsumsi" layoutX="14.0" layoutY="11.0" text="Tambahkan Data" textFill="WHITE">
                            <font>
                               <Font name="Century Gothic Bold Italic" size="23.0" />
                            </font>
                         </Label>
-                        <JFXComboBox fx:id="combobox_city_Konsumsi" focusColor="WHITE" layoutX="14.0" layoutY="57.0" prefHeight="40.0" prefWidth="193.0" promptText="Kota" unFocusColor="WHITE" />
+                        <JFXComboBox fx:id="combobox_jenispangan_Konsumsi" focusColor="WHITE" layoutX="14.0" layoutY="57.0" prefHeight="40.0" prefWidth="193.0" promptText="Jenis Pangan" unFocusColor="WHITE" />
                         <TextField fx:id="field_jumlahKonsumsi" layoutX="14.0" layoutY="113.0" prefHeight="40.0" prefWidth="200.0" promptText="Jumlah Konsumsi" />
                         <JFXCheckBox fx:id="check_policy_Konsumsi" layoutX="14.0" layoutY="322.0" text="Saya menyetujui peringatan diatas" />
-                        <AnchorPane layoutX="17.0" layoutY="164.0" prefHeight="119.0" prefWidth="193.0">
+                        <JFXButton layoutX="14.0" layoutY="352.0" onAction="#btn_konsumsi_cancel" styleClass="btnCancel" text="Batal" />
+                        <JFXButton layoutX="145.0" layoutY="352.0" onAction="#btn_konsumsi_submit" styleClass="btnSubmit" text="Submit" />
+                        <TextField fx:id="field_tahun_Konsumsi" layoutX="14.0" layoutY="163.0" prefHeight="40.0" prefWidth="200.0" promptText="Tahun" />
+                        <AnchorPane layoutX="12.0" layoutY="217.0" prefHeight="86.0" prefWidth="197.0">
                            <children>
-                              <ScrollPane layoutX="-3.0" prefHeight="149.0" prefWidth="200.0">
+                              <ScrollPane layoutX="-3.0" layoutY="47.0" prefHeight="102.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="200.0">
                                        <children>
                                           <Text fill="#e40000" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peringatan">
                                              <font>
@@ -252,20 +258,18 @@
                               </ScrollPane>
                            </children>
                         </AnchorPane>
-                        <JFXButton layoutX="14.0" layoutY="352.0" onAction="#btn_konsumsi_cancel" styleClass="btnCancel" text="Batal" />
-                        <JFXButton layoutX="145.0" layoutY="352.0" onAction="#btn_konsumsi_submit" styleClass="btnSubmit" text="Tambah" />
+                        <Text fx:id="text_infoFormKonsumsi" fill="RED" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                      </children>
                   </Pane>
                   <ToolBar layoutX="23.0" layoutY="14.0" prefHeight="40.0" prefWidth="291.0">
                      <items>
                         <Button mnemonicParsing="false" onAction="#btn_konsumsi_tambahData" styleClass="btnAdd" text="Tambah Data Baru" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#btn_konsumsi_editData" styleClass="btnEdit" text="Edit Data" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#btn_konsumsi_deleteData" styleClass="btnDelete" text="Delete Data" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#btn_konsumsi_editData" styleClass="btnEdit" text="Edit Data/Update" textFill="WHITE" />
                      </items>
                   </ToolBar>
                </children>
             </AnchorPane>
-            <Label layoutX="144.0" layoutY="66.0" prefHeight="34.0" prefWidth="504.0" styleClass="tableLabel" text="Data Konsusmi Penduduk di Jawa Timur" AnchorPane.bottomAnchor="528.0" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="376.0" AnchorPane.topAnchor="66.0">
+            <Label layoutX="144.0" layoutY="66.0" prefHeight="34.0" prefWidth="504.0" styleClass="tableLabel" text="Data Konsumsi Penduduk di Jawa Timur" AnchorPane.bottomAnchor="528.0" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="376.0" AnchorPane.topAnchor="66.0">
                <font>
                   <Font name="Berlin Sans FB" size="29.0" />
                </font>
@@ -273,12 +277,12 @@
          </children></AnchorPane>
       <AnchorPane fx:id="pertanianView" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
          <children>
-            <Label fx:id="label_table_pertanian" layoutX="93.0" layoutY="66.0" prefHeight="34.0" prefWidth="504.0" styleClass="tableLabel" visible="false">
+            <Label fx:id="label_table_pertanian" layoutX="93.0" layoutY="66.0" prefHeight="34.0" prefWidth="504.0" styleClass="tableLabel">
                <font>
                   <Font name="Berlin Sans FB" size="29.0" />
                </font>
             </Label>
-            <Pane prefHeight="45.0" prefWidth="186.0" styleClass="subPageBarEdit" stylesheets="@../css/style.css">
+            <Pane onMouseClicked="#btn_pertaninanDashboard" prefHeight="45.0" prefWidth="186.0" style="-fx-cursor: hand;" styleClass="subPageBarEdit" stylesheets="@../css/style.css">
                <children>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -330,22 +334,24 @@
                <children>
                   <TableView fx:id="tabel_HasilPanen" layoutX="23.0" layoutY="62.0" prefHeight="394.0" prefWidth="626.0">
                      <columns>
-                        <TableColumn fx:id="col_pert_HasilPanen_No" prefWidth="75.0" text="No" />
-                        <TableColumn fx:id="col_pert_HasilPanen_kota" prefWidth="196.0" text="Kota / Kabupaten" />
-                        <TableColumn fx:id="col_pert_HasilPanen_Jumlah" prefWidth="156.0" text="Jumlah Panen (ton)" />
-                        <TableColumn fx:id="col_pert_HasilPanen_LastUpdate" prefWidth="198.0" text="Update Terakhir" />
+                        <TableColumn fx:id="col_pert_HasilPanen_No" minWidth="0.0" prefWidth="0.0" resizable="false" text="No" visible="false" />
+                        <TableColumn fx:id="col_pert_HasilPanen_kota" prefWidth="135.0" text="Kota / Kabupaten" />
+                        <TableColumn fx:id="col_pert_HasilPanen_JenisTanaman" prefWidth="117.0" text="Jenis Tanaman" />
+                        <TableColumn fx:id="col_pert_HasilPanen_Jumlah" prefWidth="170.0" text="Jumlah Panen (ton)" />
+                        <TableColumn fx:id="col_pert_HasilPanen_Tahun" prefWidth="84.0" text="Tahun" />
+                        <TableColumn fx:id="col_pert_HasilPanen_LastUpdate" prefWidth="119.0" text="Update Terakhir" />
                      </columns>
                   </TableView>
                   <Pane fx:id="paneAddUpdateHasilPanen" layoutX="658.0" layoutY="62.0" prefHeight="394.0" prefWidth="239.0" styleClass="paneManagement" visible="false">
                      <children>
-                        <Label fx:id="label_MenuManagement" layoutX="14.0" layoutY="11.0" text="Tambahkan Data" textFill="WHITE">
+                        <Label fx:id="label_MenuManagementHasilPanen" layoutX="14.0" layoutY="11.0" text="Tambahkan Data" textFill="WHITE">
                            <font>
                               <Font name="Century Gothic Bold Italic" size="23.0" />
                            </font>
                         </Label>
                         <JFXComboBox fx:id="combobox_city_HasilPanen" focusColor="#943232" layoutX="14.0" layoutY="57.0" prefHeight="40.0" prefWidth="193.0" promptText="Kota" unFocusColor="BLACK" />
                         <JFXComboBox fx:id="combobox_jenisPangan_HasilPanen" layoutX="14.0" layoutY="116.0" prefHeight="25.0" prefWidth="193.0" promptText="Jenis Pangan" />
-                        <TextField fx:id="field_jumlahPanen" layoutX="11.0" layoutY="168.0" prefHeight="40.0" prefWidth="200.0" promptText="Jumlah Panen" />
+                        <TextField fx:id="field_jumlahPanen" layoutX="11.0" layoutY="168.0" prefHeight="40.0" prefWidth="97.0" promptText="Jumlah Panen" />
                         <JFXCheckBox fx:id="check_policy_HasilPanen" layoutX="14.0" layoutY="322.0" text="Saya menyetujui peringatan diatas" />
                         <AnchorPane layoutX="12.0" layoutY="220.0" prefHeight="86.0" prefWidth="197.0">
                            <children>
@@ -366,14 +372,25 @@
                            </children>
                         </AnchorPane>
                         <JFXButton layoutX="14.0" layoutY="352.0" onAction="#btn_pertanian_HasilPanen_cancel" styleClass="btnCancel" text="Batal" />
-                        <JFXButton layoutX="145.0" layoutY="352.0" onAction="#btn_pertanian_HasilPanen_submit" styleClass="btnSubmit" text="Tambah" />
+                        <JFXButton layoutX="145.0" layoutY="352.0" onAction="#btn_pertanian_HasilPanen_submit" styleClass="btnSubmit" text="Submit" />
+                        <TextField fx:id="field_tahun_HasilPanen" layoutX="120.0" layoutY="168.0" prefHeight="40.0" prefWidth="89.0" promptText="Tahun" />
+                        <Label layoutX="11.0" layoutY="151.0" text="Jumlah panen (ton):">
+                           <font>
+                              <Font name="System Bold Italic" size="10.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="120.0" layoutY="151.0" text="Tahun :">
+                           <font>
+                              <Font name="System Bold Italic" size="10.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="text_infoFormHasilPanen" fill="RED" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                      </children>
                   </Pane>
                   <ToolBar layoutX="23.0" layoutY="14.0" prefHeight="40.0" prefWidth="291.0">
                      <items>
                         <Button mnemonicParsing="false" onAction="#btn_pert_HasilPanen_tambahData" styleClass="btnAdd" text="Tambah Data Baru" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#btn_pert_HasilPanen_EditData" styleClass="btnEdit" text="Edit Data" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#btn_pert_HasilPanen_DeleteData" styleClass="btnDelete" text="Delete Data" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#btn_pert_HasilPanen_EditData" styleClass="btnEdit" text="Edit Data/Update" textFill="WHITE" />
                      </items>
                   </ToolBar>
                </children>
@@ -382,15 +399,16 @@
                <children>
                   <TableView fx:id="tabel_LuasLahan" layoutX="23.0" layoutY="62.0" prefHeight="394.0" prefWidth="626.0">
                      <columns>
-                        <TableColumn fx:id="col_pert_LuasLahan_No" prefWidth="75.0" text="No" />
+                        <TableColumn fx:id="col_pert_LuasLahan_No" minWidth="0.0" prefWidth="0.0" resizable="false" text="No" visible="false" />
                         <TableColumn fx:id="col_pert_LuasLahan_Kota" prefWidth="196.0" text="Kota / Kabupaten" />
                         <TableColumn fx:id="col_pert_LuasLahan_Jumlah" prefWidth="156.0" text="Luas Lahan Pertanian (ha)" />
-                        <TableColumn fx:id="col_pert_LuaslLahan_LastUpdate" prefWidth="198.0" text="Update Terakhir" />
+                        <TableColumn fx:id="col_pert_LuaslLahan_Tahun" prefWidth="130.0" text="Tahun" />
+                        <TableColumn fx:id="col_pert_LuaslLahan_LastUpdate" prefWidth="143.0" text="Update Terakhir" />
                      </columns>
                   </TableView>
                   <Pane fx:id="paneAddUpdateLuasLahan" layoutX="658.0" layoutY="62.0" prefHeight="394.0" prefWidth="239.0" styleClass="paneManagement" visible="false">
                      <children>
-                        <Label fx:id="label_MenuManagement" layoutX="14.0" layoutY="11.0" text="Tambahkan Data" textFill="WHITE">
+                        <Label fx:id="label_MenuManagementLuasLahan" layoutX="14.0" layoutY="11.0" text="Tambahkan Data" textFill="WHITE">
                            <font>
                               <Font name="Century Gothic Bold Italic" size="23.0" />
                            </font>
@@ -398,11 +416,14 @@
                         <JFXComboBox fx:id="combobox_city_LuasLahan" focusColor="WHITE" layoutX="14.0" layoutY="57.0" prefHeight="40.0" prefWidth="193.0" promptText="Kota" unFocusColor="WHITE" />
                         <TextField fx:id="field_pert_LuasLahan_Jumlah" layoutX="14.0" layoutY="113.0" prefHeight="40.0" prefWidth="200.0" promptText="Luas Lahan" />
                         <JFXCheckBox fx:id="check_policy_LuasLahan" layoutX="14.0" layoutY="322.0" text="Saya menyetujui peringatan diatas" />
-                        <AnchorPane layoutX="17.0" layoutY="164.0" prefHeight="119.0" prefWidth="193.0">
+                        <JFXButton layoutX="14.0" layoutY="352.0" onAction="#btn_pert_LuasLahan_Cancel" styleClass="btnCancel" text="Batal" />
+                        <JFXButton layoutX="145.0" layoutY="352.0" onAction="#btn_pert_LuasLahan_Submit" styleClass="btnSubmit" text="Submit" />
+                        <TextField fx:id="field_tahun_LuasLahan" layoutX="14.0" layoutY="170.0" prefHeight="40.0" prefWidth="200.0" promptText="Tahun" />
+                        <AnchorPane layoutX="12.0" layoutY="222.0" prefHeight="86.0" prefWidth="197.0">
                            <children>
-                              <ScrollPane layoutX="-3.0" prefHeight="149.0" prefWidth="200.0">
+                              <ScrollPane layoutX="-3.0" layoutY="47.0" prefHeight="102.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="200.0">
                                        <children>
                                           <Text fill="#e40000" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peringatan">
                                              <font>
@@ -416,19 +437,18 @@
                               </ScrollPane>
                            </children>
                         </AnchorPane>
-                        <JFXButton layoutX="14.0" layoutY="352.0" onAction="#btn_pert_LuasLahan_Cancel" styleClass="btnCancel" text="Batal" />
-                        <JFXButton layoutX="145.0" layoutY="352.0" onAction="#btn_pert_LuasLahan_Submit" styleClass="btnSubmit" text="Tambah" />
+                        <Text fx:id="text_infoFormLuasLahan" fill="RED" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                      </children>
                   </Pane>
                   <ToolBar layoutX="23.0" layoutY="14.0" prefHeight="40.0" prefWidth="291.0">
                      <items>
                         <Button mnemonicParsing="false" onAction="#btn_pert_LuasLahan_TambahData" styleClass="btnAdd" text="Tambah Data Baru" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#btn_pert_LuasLahan_Editdata" styleClass="btnEdit" text="Edit Data" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#btn_pert_LuashLahan_DeleteData" styleClass="btnDelete" text="Delete Data" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#btn_pert_LuasLahan_Editdata" styleClass="btnEdit" text="Edit Data/Update" textFill="WHITE" />
                      </items>
                   </ToolBar>
                </children>
             </AnchorPane>
          </children></AnchorPane>
+      <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="380.0" />
    </children>
 </AnchorPane>
