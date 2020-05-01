@@ -57,20 +57,6 @@ public class DataAccessObject {
         }
         return list;
     }
-    public ObservableList<Data> getData(String query){
-        ObservableList list = FXCollections.observableArrayList();
-        try{
-            connect = database.connectDB();
-            pstmt = connect.prepareStatement(query);
-            rs = pstmt.executeQuery();
-            while (rs.next()){
-                list.add(new Data(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6) ));
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return list;
-    }
     public ObservableList<Penduduk> getDataPenduduk(String query){
         ObservableList list = FXCollections.observableArrayList();
         try {
@@ -135,6 +121,20 @@ public class DataAccessObject {
             rs = pstmt.executeQuery();
             while (rs.next()){
                 list.add(new HasilPanen(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDouble(4),rs.getString(5),rs.getString(6)));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+    public ObservableList<Tanaman> getDataTanaman(String query){
+        ObservableList list = FXCollections.observableArrayList();
+        try {
+            connect = database.connectDB();
+            pstmt = connect.prepareStatement(query);
+            rs = pstmt.executeQuery();
+            while (rs.next()){
+                list.add(new Tanaman(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDouble(4),rs.getString(5),rs.getString(6)));
             }
         }catch (Exception e){
             e.printStackTrace();

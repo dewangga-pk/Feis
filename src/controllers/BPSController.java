@@ -239,12 +239,11 @@ public class BPSController implements Initializable {
         combobox_city_LuasLahan.setItems(dao.getDataKotaCombobox(query));
     }
     private void initJenisPangan(){
-        combobox_jenispangan_Konsumsi.getSelectionModel().clearSelection();
         query="SELECT nama_pangan FROM tanaman";
+        combobox_jenispangan_Konsumsi.setItems(dao.getJenisPanganCombobox(query));
     }
     private void initJenisTanaman(){
         query="SELECT jenis_tanaman FROM tanaman";
-        combobox_jenispangan_Konsumsi.setItems(dao.getJenisPanganCombobox(query));
         combobox_jenisPangan_HasilPanen.setItems(dao.getJenisPanganCombobox(query));
     }
     private void initTabelPenduduk(){
