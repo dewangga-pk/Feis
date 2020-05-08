@@ -4,6 +4,11 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,105 +19,273 @@
 
 <AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="backgroundApp" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BappedaController">
    <children>
-      <Pane prefHeight="70.0" prefWidth="1024.0" styleClass="paneDashboardBappeda" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchor_head" prefHeight="113.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Equalization Information System for Suistanable Development Goals" wrappingWidth="823.6086883544922" x="110.0" y="40.0">
-               <font>
-                  <Font name="Segoe UI" size="25.0" />
-               </font>
-            </Text>
-         </children>
-      </Pane>
-      <ToolBar layoutX="198.0" layoutY="83.0" prefHeight="46.0" prefWidth="609.0" styleClass="subTitleBarBappeda" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="70.0">
-        <items>
-          <Button mnemonicParsing="false" styleClass="buttonTitleBar" text="Beranda" />
-            <Button mnemonicParsing="false" styleClass="buttonTitleBar" text="Profile">
-               <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <Pane prefHeight="70.0" prefWidth="1024.0" styleClass="paneDashboardBappeda" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Equalization Information System for Suistanable Development Goals" wrappingWidth="823.6086883544922" x="110.0" y="40.0">
+                     <font>
+                        <Font name="Segoe UI" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <ToolBar prefHeight="46.0" prefWidth="609.0" styleClass="subTitleBarBappeda" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="70.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#btn_beranda" styleClass="buttonTitleBar" text="Beranda" />
+                  <Button mnemonicParsing="false" styleClass="buttonTitleBar" text="Profile">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../css/Asset/Profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btn_logOut" styleClass="buttonTitleBar" text="Keluar">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../css/Asset/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+              </items>
+            </ToolBar>
+            <Pane prefHeight="45.0" prefWidth="408.0" styleClass="subTitleBarBappeda" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../css/Asset/Profile.png" />
+                        <Image url="@../css/Asset/logojatim.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="154.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BAPPEDA">
+                     <font>
+                        <Font name="Segoe UI" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="view_beranda" layoutX="63.0" layoutY="202.0" prefHeight="507.0" prefWidth="882.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="123.0" layoutY="167.0" onAction="#btn_dataWilayah" style="-fx-background-color: #155A90;" styleClass="menuDashboard" text="Data Wilayah">
+               <padding>
+                  <Insets bottom="10.0" top="5.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="128.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/bappedaMenu.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="326.0" layoutY="167.0" onAction="#btn_tanamanPangan" style="-fx-background-color: #7CA20E;" styleClass="menuDashboard" text="Tanaman Pangan">
+               <padding>
+                  <Insets bottom="10.0" top="5.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/Padi.png" />
                      </image>
                   </ImageView>
                </graphic>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#logOutbtn" styleClass="buttonTitleBar" text="Keluar">
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="530.0" layoutY="167.0" onAction="#btn_calculator" prefWidth="176.0" style="-fx-background-color: #643D46;" styleClass="menuDashboard" text="Perkiraan Hasil Panen" textAlignment="CENTER" wrapText="true">
+               <padding>
+                  <Insets bottom="10.0" top="5.0" />
+               </padding>
                <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../css/Asset/logout.png" />
+                        <Image url="@../css/Asset/Calculator.png" />
                      </image>
                   </ImageView>
                </graphic>
-            </Button>
-        </items>
-      </ToolBar>
-      <Pane layoutX="65.0" layoutY="116.0" prefHeight="45.0" prefWidth="408.0" styleClass="subTitleBarBappeda" stylesheets="@../css/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0">
-         <children>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/Asset/logojatim.png" />
-               </image>
-            </ImageView>
-            <Text fill="WHITE" layoutX="154.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BAPPEDA">
-               <font>
-                  <Font name="Segoe UI" size="25.0" />
-               </font>
-            </Text>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="726.0" layoutY="167.0" onAction="#btn_pemerataan" prefWidth="176.0" style="-fx-background-color: #1F266A;" styleClass="menuDashboard" text="Pemerataan">
+               <padding>
+                  <Insets bottom="10.0" top="5.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/Pemerataan.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
          </children>
-         <padding>
-            <Insets top="5.0" />
-         </padding>
-      </Pane>
-      <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="64.0" layoutY="358.0" onAction="#dataWilayahBtn" style="-fx-background-color: #155A90;" styleClass="menuDashboard" text="Data Wilayah">
-         <padding>
-            <Insets bottom="10.0" top="5.0" />
-         </padding>
-         <graphic>
-            <ImageView fitHeight="128.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/Asset/bappedaMenu.png" />
-               </image>
-               <viewport>
-                  <Rectangle2D />
-               </viewport>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-      <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="309.0" layoutY="358.0" onAction="#tanamanPanganBtn" style="-fx-background-color: #7CA20E;" styleClass="menuDashboard" text="Tanaman Pangan">
-         <padding>
-            <Insets bottom="10.0" top="5.0" />
-         </padding>
-         <graphic>
-            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/Asset/Padi.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-      <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="577.0" layoutY="358.0" onAction="#calculatorBtn" prefWidth="176.0" style="-fx-background-color: #643D46;" styleClass="menuDashboard" text="Perkiraan Hasil Panen" textAlignment="CENTER" wrapText="true">
-         <padding>
-            <Insets bottom="10.0" top="5.0" />
-         </padding>
-         <graphic>
-            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/Asset/Calculator.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-      <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="800.0" layoutY="358.0" onAction="#pemerataanBtn" prefWidth="176.0" style="-fx-background-color: #1F266A;" styleClass="menuDashboard" text="Pemerataan">
-         <padding>
-            <Insets bottom="10.0" top="5.0" />
-         </padding>
-         <graphic>
-            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/Asset/Pemerataan.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
+      </AnchorPane>
+      <AnchorPane fx:id="view_dataWilayah" layoutX="2.0" layoutY="113.0" prefHeight="242.0" prefWidth="221.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
+         <children>
+            <Pane prefHeight="46.0" prefWidth="263.0" styleClass="subPageBarDataPenduduk" stylesheets="@../css/style.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/penduduk.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="109.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Wilayah">
+                     <font>
+                        <Font name="Segoe UI" size="25.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/Food.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="70.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/fields.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Pane>
+            <TableView fx:id="tabel_data_wilayah" layoutX="72.0" layoutY="125.0" prefHeight="467.0" prefWidth="860.0">
+              <columns>
+                <TableColumn fx:id="wil_col_id" minWidth="30.0" prefWidth="-1.0" text="No" />
+                <TableColumn fx:id="wil_col_kota" prefWidth="140.00003814697266" text="Kota / Kabupaten" />
+                  <TableColumn fx:id="wil_col_jumlahPenduduk" prefWidth="146.39996337890625" text="Jumlah Penduduk" />
+                  <TableColumn fx:id="wil_col_tingkatKonsumsi" prefWidth="199.99996948242188" text="Tingkat Konsumsi (kg per kapita)" />
+                  <TableColumn fx:id="wil_col_JenisPangan" prefWidth="98.39996337890625" text="Jenis Pangan" />
+                  <TableColumn fx:id="wil_col_luasLahan" prefWidth="148.7999267578125" text="Luas Lahan Pertanian" />
+                  <TableColumn fx:id="wil_col_tahun" prefWidth="95.2000732421875" text="Tahun" />
+              </columns>
+            </TableView>
+            <Label layoutX="227.0" layoutY="73.0" styleClass="tableLabel" text="Tabel Hasil Pendataan Wilayah di Jawa Timur" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="view_tanamanPangan" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
+         <children>
+            <Pane prefHeight="46.0" prefWidth="245.0" styleClass="subPageBarDataTanaman" stylesheets="@../css/style.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/Padi.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="37.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanaman Pangan">
+                     <font>
+                        <Font name="Segoe UI" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Pane>
+            <TableView fx:id="tabel_TanamanPangan" layoutX="217.0" layoutY="140.0" prefHeight="394.0" prefWidth="601.0">
+              <columns>
+                <TableColumn fx:id="pangan_col_id" minWidth="0.0" prefWidth="0.0" resizable="false" text="No" />
+                <TableColumn fx:id="pangan_col_jenisTanaman" prefWidth="149.8666229248047" text="Jenis Tanaman" />
+                  <TableColumn fx:id="pangan_col_namaPangan" prefWidth="143.19992065429688" text="Nama Pangan" />
+                  <TableColumn fx:id="pangan_col_rataHasil" prefWidth="167.20001220703125" text="Rata-Rata Hasil" />
+                  <TableColumn fx:id="pangan_col_lastUpdate" prefWidth="139.20003662109377" text="Terakhir Update" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="view_calculator" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
+         <children>
+            <Pane prefHeight="46.0" prefWidth="289.0" styleClass="subPageBarCalculator" stylesheets="@../css/style.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/Calculator.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="menuID" fill="WHITE" layoutX="44.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perkiraan Hasil Panen">
+                     <font>
+                        <Font name="Segoe UI" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Pane>
+            <Pane layoutX="223.0" layoutY="97.0" prefHeight="470.0" prefWidth="570.0" styleClass="paneCalculator">
+               <children>
+                  <Label layoutX="110.0" layoutY="30.0" styleClass="tableLabel" text="Calculator Hitung Hasil Panen">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="46.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Tanaman">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="cal_comboBox_JenisTanaman" layoutX="219.0" layoutY="95.0" prefHeight="53.0" prefWidth="150.0" promptText="Pilih Jenis Tanaman" />
+                  <Text fill="WHITE" layoutX="46.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Luas Lahan">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="cal_textfield_LuasLahan" layoutX="220.0" layoutY="172.0" styleClass="textFieldform" />
+                  <JFXButton layoutX="363.0" layoutY="255.0" onAction="#cal_btn_hitung" styleClass="btnHitung" text="Hitung" />
+                  <Text fill="WHITE" layoutX="46.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perkiraan Hasil">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Pane layoutX="210.0" layoutY="341.0" prefHeight="88.0" prefWidth="306.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text fx:id="cal_result_text" fill="#1685cd" layoutX="23.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resultHasil" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="view_pemerataan" prefHeight="242.0" prefWidth="221.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
+         <children>
+            <Pane prefHeight="46.0" prefWidth="263.0" styleClass="subPageBarDataPemerataan" stylesheets="@../css/style.css">
+               <children>
+                  <Text fill="WHITE" layoutX="80.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pemerataan">
+                     <font>
+                        <Font name="Segoe UI" size="25.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/Asset/Food.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Pane>
+            <TableView fx:id="tabel_pemerataan" layoutX="77.0" layoutY="139.0" prefHeight="467.0" prefWidth="860.0">
+               <columns>
+                  <TableColumn fx:id="rata_col_id" minWidth="0.0" prefWidth="0.0" resizable="false" text="No" />
+                  <TableColumn fx:id="rata_col_kota" prefWidth="136.53333282470703" text="Kota / Kabupaten" />
+                  <TableColumn fx:id="rata_col_jumlahPenduduk" prefWidth="124.53329467773438" text="Jumlah Penduduk" />
+                  <TableColumn fx:id="rata_col_jenisPangan" prefWidth="75.0" text="Pangan" />
+                  <TableColumn fx:id="rata_col_tingkatKonsumsi" prefWidth="216.26678466796875" text="Tingkat Konsumsi (kg per kapita)" />
+                  <TableColumn fx:id="rata_col_JumlahProduksi" prefWidth="114.6666259765625" text="Jumlah Produksi" />
+                  <TableColumn fx:id="rata_col_status" prefWidth="109.86669921875" text="Status" />
+                  <TableColumn fx:id="rata_col_tahun" prefWidth="79.99993896484375" text="Tahun" />
+               </columns>
+            </TableView>
+            <Label layoutX="122.0" layoutY="78.0" styleClass="tableLabel" text="Tabel Perkiraan Pemerataan Konsumsi Pangan di Jawa Timur" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

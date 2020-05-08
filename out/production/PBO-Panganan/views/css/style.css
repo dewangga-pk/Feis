@@ -92,11 +92,12 @@
 .btnHitung{
     -fx-pref-width: 140;
     -fx-pref-height: 32;
-    -fx-background-color: #6DD2F5;
+    -fx-background-color: #2098D1;
     -fx-text-fill: #FFFFFF;
     -fx-font-family: "Segoe UI";
     -fx-font-size: 18;
     -fx-font-weight: bold;
+    -fx-cursor: hand;
 }
 .btnSubmit{
     -fx-pref-width: 80;
@@ -153,4 +154,9 @@
     -fx-background-color: white;
     -fx-border-color: grey;
     -fx-font-size: 29;
+}
+.resultHasil{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-font-size: 30;
 }

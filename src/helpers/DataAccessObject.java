@@ -141,4 +141,36 @@ public class DataAccessObject {
         }
         return list;
     }
+    public ObservableList<DataWilayah> getDataWilayah(String query){
+        ObservableList list = FXCollections.observableArrayList();
+        try {
+            connect = database.connectDB();
+            pstmt = connect.prepareStatement(query);
+            rs = pstmt.executeQuery();
+            int i = 1;
+            while (rs.next()){
+                list.add(new DataWilayah(i,rs.getString(1),rs.getInt(2),rs.getDouble(3),rs.getString(4),rs.getDouble(5),rs.getString(6)));
+                i++;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+    public ObservableList<Pemerataan> getDataPemerataan(String query){
+        ObservableList list = FXCollections.observableArrayList();
+        try {
+            connect = database.connectDB();
+            pstmt = connect.prepareStatement(query);
+            rs = pstmt.executeQuery();
+            int i = 1;
+            while (rs.next()){
+                list.add(new Pemerataan(i,rs.getString(1),rs.getInt(2),rs.getString(3),rs.getDouble(4),rs.getDouble(5),rs.getString(6)));
+                i++;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
 }
