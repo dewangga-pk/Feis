@@ -20,7 +20,7 @@ import models.Tanaman;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LitbangTani implements Initializable {
+public class LitbangTaniController implements Initializable {
 
 
     @FXML
