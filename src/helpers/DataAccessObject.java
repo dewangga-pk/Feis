@@ -8,6 +8,7 @@ import models.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DataAccessObject {
     private DBConnection database = new DBConnection();
@@ -18,7 +19,7 @@ public class DataAccessObject {
     public DataAccessObject(){
 
     }
-    public void  saveData(String query){
+    public void saveData(String query){
         try{
             connect = database.connectDB();
             pstmt = connect.prepareStatement(query);
@@ -28,6 +29,20 @@ public class DataAccessObject {
         }finally {
             database.close(connect,pstmt,null);
         }
+    }
+    public String getCustomData(String query){
+        String customData = "";
+        try{
+            connect = database.connectDB();
+            pstmt = connect.prepareStatement(query);
+            rs = pstmt.executeQuery();
+            while (rs.next()){
+                customData=rs.getString(1);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return customData;
     }
     public ObservableList<Kota> getDataKota(String query){
         ObservableList<Kota> list = FXCollections.observableArrayList();

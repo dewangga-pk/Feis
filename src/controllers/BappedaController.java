@@ -127,6 +127,11 @@ public class BappedaController implements Initializable {
     void btn_calculator(ActionEvent event) {
         view_beranda.setVisible(false);
         view_calculator.setVisible(true);
+        cal_comboBox_JenisTanaman.getSelectionModel().clearSelection();
+        query = "SELECT jenis_tanaman FROM tanaman";
+        cal_comboBox_JenisTanaman.setItems(dao.getJenisPanganCombobox(query));
+        cal_textfield_LuasLahan.clear();
+        cal_result_text.setText("");
     }
 
     @FXML
@@ -157,8 +162,19 @@ public class BappedaController implements Initializable {
 
     @FXML
     void cal_btn_hitung(ActionEvent event) {
-
+        String id_tanaman;
+        double potensi,luaslahan;
+        try{
+            id_tanaman = cal_comboBox_JenisTanaman.getSelectionModel().getSelectedIndex()+1+"";
+            query= "SELECT potensi_rata_rata_hasil FROM tanaman where id="+id_tanaman+"";
+            potensi = Double.parseDouble(dao.getCustomData(query));
+            luaslahan = Double.parseDouble(cal_textfield_LuasLahan.getText());
+            cal_result_text.setText(String.valueOf(potensi*luaslahan)+" ton");
+        }catch (Exception e){
+            cal_result_text.setText("Pastikan Semua Data sudah terisi");
+        }
     }
+
     private String query;
     DataAccessObject dao;
     @Override

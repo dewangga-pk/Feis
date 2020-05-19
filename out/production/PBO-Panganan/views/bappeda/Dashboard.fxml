@@ -246,7 +246,7 @@
                   </Text>
                   <Pane layoutX="210.0" layoutY="341.0" prefHeight="88.0" prefWidth="306.0" style="-fx-background-color: white;">
                      <children>
-                        <Text fx:id="cal_result_text" fill="#1685cd" layoutX="23.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resultHasil" />
+                        <Text fx:id="cal_result_text" fill="#242626" layoutX="23.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resultHasil" />
                      </children>
                   </Pane>
                </children>
